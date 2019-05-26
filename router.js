@@ -5,6 +5,7 @@ const usersController = require('./controllers/usersController')
 const categoriesController = require('./controllers/categoriesController');
 const postsController = require('./controllers/postsController');
 const uploadController = require('./controllers/uploadController');
+const optionsController = require('./controllers/optionsController');
 
 router.get('/',pagesController.getIndexPage)
 .get('/list',pagesController.getListPage)
@@ -43,4 +44,7 @@ router.get('/',pagesController.getIndexPage)
 
 // 上传文件；
 .post('/uploadFile',uploadController.uploadFile)
+
+// navMenus页面；
+.post('/addNavMenus',optionsController.addNavMenus)
 module.exports = router;
